@@ -12,6 +12,9 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -64,17 +67,34 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public Page<CityDto> getCities(int pageNo, int pageSize, String sortBy, String sortDir) {
-        return null;
+        Sort sort = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortBy).ascending()
+                : Sort.by(sortBy).descending();
+
+
+        Pageable pageable = PageRequest.of(pageNo, pageSize, sort);
+        Page<City> all = cityRepository.findAll(pageable);
+        return genericMapper.mapPage(all, CityDto.class);
     }
 
     @Override
     public Page<CityDto> findCitiesByName(int pageNo, int pageSize, String sortBy, String sortDir, String name) {
-        return null;
+        Sort sort = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortBy).ascending()
+                : Sort.by(sortBy).descending();
+
+        // create Pageable instance
+        Pageable pageable = PageRequest.of(pageNo, pageSize, sort);
+        Page<City> cities = cityRepository.findByNameContainingIgnoreCase(name, pageable);
+        return genericMapper.mapPage(cities,CityDto.class);
     }
 
     @Override
     public CityDto updateCity(CityDto dto) {
-        return null;
+        City city = cityRepository.findById(dto.getId())
+                .orElseThrow();//exception yazılacak
+        city.setName(dto.getName());
+        city.setPhoto(dto.getPhoto());
+        City updatedCity = cityRepository.save(city);
+        return modelMapper.map(updatedCity,CityDto.class);
     }
 
 
