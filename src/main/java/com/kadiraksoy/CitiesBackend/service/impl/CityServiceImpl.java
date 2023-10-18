@@ -67,6 +67,7 @@ public class CityServiceImpl implements CityService {
 
         }catch (IOException e){
             throw new ApplicationException(HttpStatus.INTERNAL_SERVER_ERROR,e.getMessage());
+
         }
 
 
