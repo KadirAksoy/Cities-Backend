@@ -37,17 +37,7 @@ class CityServiceImplTest {
 
     @InjectMocks
     private CityServiceImpl cityService;
-    private City city;
 
-
-    @BeforeEach
-    public void setup() {
-        city = City.builder()
-                .id(1L)
-                .name("Gaziantep")
-                .photo("http://cities.com/gaziantep.jpeg")
-                .build();
-    }
 
 
 
