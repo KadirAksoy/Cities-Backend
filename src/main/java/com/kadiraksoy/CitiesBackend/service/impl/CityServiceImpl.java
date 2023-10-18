@@ -7,10 +7,13 @@ import com.kadiraksoy.CitiesBackend.model.City;
 import com.kadiraksoy.CitiesBackend.repository.CityRepository;
 import com.kadiraksoy.CitiesBackend.service.CityService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+import org.apache.logging.log4j.Logger;
 import org.modelmapper.ModelMapper;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -27,6 +30,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class CityServiceImpl implements CityService {
 
     private final CityRepository cityRepository;
@@ -44,9 +48,9 @@ public class CityServiceImpl implements CityService {
                             .withFirstRecordAsHeader()
                             .withIgnoreHeaderCase()
                             .withTrim());
+            log.info("Csv dosyası okundu.");
 
             List<City> cities = new ArrayList<>();
-
             for (CSVRecord record : csvParser) {
                 City City = new City();
                 City.setId(Long.valueOf(record.get("id")));
@@ -54,9 +58,12 @@ public class CityServiceImpl implements CityService {
                 City.setPhoto(record.get("photo"));
                 cities.add(City);
             }
+            log.info("csv dosyasındaki bilgiler cities listesine eklendi.");
 
             cityRepository.saveAll(cities);
+            log.info("cities listesi database'e kaydedildi.");
             csvParser.close();
+
 
         }catch (IOException e){
             throw new ApplicationException(HttpStatus.INTERNAL_SERVER_ERROR,e.getMessage());
