@@ -19,7 +19,7 @@ public class CityController {
     public ResponseEntity<Page<CityDto>> getCities(
             @RequestParam(
                     value = "pageNo",
-                    defaultValue = "3",
+                    defaultValue = AppConstants.DEFAULT_PAGE_NUMBER,
                     required = false)
             int pageNo,
             @RequestParam(
