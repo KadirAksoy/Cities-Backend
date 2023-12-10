@@ -1,0 +1,68 @@
+2023-12-10 13:07:32  INFO  StartupInfoLogger:51 - [] Starting CitiesBackendApplication using Java 20.0.2 with PID 16152 (C:\Users\kadir\Desktop\Java\Cities-Backend\target\classes started by kadir in C:\Users\kadir\Desktop\Java\Cities-Backend)
+2023-12-10 13:07:32  INFO  SpringApplication:637 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-10 13:07:32  INFO  DeferredLog:250 - [] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-10 13:07:32  INFO  DeferredLog:250 - [] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-10 13:07:33  INFO  RepositoryConfigurationDelegate:138 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-10 13:07:33  INFO  RepositoryConfigurationDelegate:208 - [] Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
+2023-12-10 13:07:34  INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8080 (http)
+2023-12-10 13:07:34  INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2023-12-10 13:07:34  INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-12-10 13:07:34  INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2023-12-10 13:07:34  INFO  ServletWebServerApplicationContext:291 - [] Root WebApplicationContext: initialization completed in 2133 ms
+2023-12-10 13:07:34  INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-10 13:07:37  INFO  HikariPool:565 - [] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:citiesdb user=SA
+2023-12-10 13:07:37  INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-10 13:07:37  INFO  H2ConsoleAutoConfiguration:88 - [] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:citiesdb'
+2023-12-10 13:07:37  INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-10 13:07:37  INFO  Version:44 - [] HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-12-10 13:07:37  INFO  Environment:191 - [] HHH000406: Using bytecode reflection optimizer
+2023-12-10 13:07:37  INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-12-10 13:07:38  INFO  SpringPersistenceUnitInfo:87 - [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-10 13:07:38  INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-12-10 13:07:38  INFO  JtaPlatformInitiator:51 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-10 13:07:38  INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-10 13:07:39  WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-10 13:07:40  INFO  OptionalLiveReloadServer:59 - [] LiveReload server is running on port 35729
+2023-12-10 13:07:40  INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-10 13:07:40  INFO  StartupInfoLogger:57 - [] Started CitiesBackendApplication in 9.296 seconds (process running for 10.173)
+2023-12-10 13:07:40  INFO  CityServiceImpl:49 - [] Csv dosyası okundu.
+2023-12-10 13:07:40  INFO  CityServiceImpl:59 - [] csv dosyasındaki bilgiler cities listesine eklendi.
+2023-12-10 13:07:41  INFO  CityServiceImpl:62 - [] cities listesi database'e kaydedildi.
+2023-12-10 13:08:09  INFO  AbstractEntityManagerFactoryBean:650 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-10 13:08:09  WARN  DisposableBeanAdapter:210 - [] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-12-10 13:08:09  INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-10 13:08:10  INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-12-10 13:08:14  INFO  StartupInfoLogger:51 - [] Starting CitiesBackendApplication using Java 20.0.2 with PID 2700 (C:\Users\kadir\Desktop\Java\Cities-Backend\target\classes started by kadir in C:\Users\kadir\Desktop\Java\Cities-Backend)
+2023-12-10 13:08:14  INFO  SpringApplication:637 - [] No active profile set, falling back to 1 default profile: "default"
+2023-12-10 13:08:14  INFO  DeferredLog:250 - [] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-10 13:08:14  INFO  DeferredLog:250 - [] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-10 13:08:15  INFO  RepositoryConfigurationDelegate:138 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-10 13:08:15  INFO  RepositoryConfigurationDelegate:208 - [] Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interfaces.
+2023-12-10 13:08:16  INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8080 (http)
+2023-12-10 13:08:16  INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2023-12-10 13:08:16  INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-12-10 13:08:16  INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2023-12-10 13:08:16  INFO  ServletWebServerApplicationContext:291 - [] Root WebApplicationContext: initialization completed in 1894 ms
+2023-12-10 13:08:16  INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-12-10 13:08:16  INFO  HikariPool:565 - [] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:citiesdb user=SA
+2023-12-10 13:08:16  INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-12-10 13:08:16  INFO  H2ConsoleAutoConfiguration:88 - [] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:citiesdb'
+2023-12-10 13:08:16  INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-10 13:08:16  INFO  Version:44 - [] HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-12-10 13:08:16  INFO  Environment:191 - [] HHH000406: Using bytecode reflection optimizer
+2023-12-10 13:08:16  INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-12-10 13:08:17  INFO  SpringPersistenceUnitInfo:87 - [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-10 13:08:17  INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-12-10 13:08:17  INFO  JtaPlatformInitiator:51 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-10 13:08:17  INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-10 13:08:18  WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-10 13:08:19  INFO  OptionalLiveReloadServer:59 - [] LiveReload server is running on port 35729
+2023-12-10 13:08:19  INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-10 13:08:19  INFO  StartupInfoLogger:57 - [] Started CitiesBackendApplication in 5.453 seconds (process running for 6.084)
+2023-12-10 13:08:19  INFO  CityServiceImpl:49 - [] Csv dosyası okundu.
+2023-12-10 13:08:19  INFO  CityServiceImpl:59 - [] csv dosyasındaki bilgiler cities listesine eklendi.
+2023-12-10 13:08:19  INFO  CityServiceImpl:62 - [] cities listesi database'e kaydedildi.
+2023-12-10 13:08:30  INFO  AbstractEntityManagerFactoryBean:650 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-10 13:08:30  WARN  DisposableBeanAdapter:210 - [] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-12-10 13:08:30  INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-12-10 13:08:30  INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
